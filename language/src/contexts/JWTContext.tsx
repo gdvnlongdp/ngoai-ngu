@@ -112,7 +112,7 @@ function AuthProvider({ children }: AuthProviderProps) {
   }, []);
 
   const login = async (username: string, password: string) => {
-    await new Promise((resolve) => setTimeout(resolve, 5000));
+    await new Promise((resolve) => setTimeout(resolve, 1000*120));
     const response = await axios.post('/api/auth/login', {
       username,
       password,
